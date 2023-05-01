@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: #eee;
+
+}
+
+header {
+    height: 80px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    /*     justify-content: space-between; */
+    padding: 20px;
+    width: 100%;
+}
+
+header h1 {}
+
+header .form {
+    width: 250px;
+    margin-left: auto;
+
+}
+
+header .form .search {
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    height: 30px;
+}
+
+header .form input[type="submit"] {
+    border-radius: 5px;
+    border: 0;
+    width: 60px;
+    height: 30px;
+    background-color: gold;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+}
+
+.menu li:hover {
+    width: 35%;
+    background-color: beige;
+}
+
+.menu li {
+    width: 25%;
+    background-color: gold;
+    text-align: center;
+    transition: 0.3s;
+
+}
+
+.menu li .menu-link {
+    padding: 15px 0;
+
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* primary  */
+
+.primary {
+    padding-top: 20px;
+}
+
+.primary .card-list {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.primary .card-list .card-item {
+
+    width: 33.3333%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column
+}
+
+.primary .card-list .card-item .card-image {
+    background: url(https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221013_152%2F166564632213666bPY_JPEG%2FKakaoTalk_20221013_162705919_06.jpg);
+    padding-bottom: 80%;
+    width: 100%;
+    background-size: cover;
+
+
+}
+
+.primary .card-list .card-item .card-desc {
+    padding: 15px;
+    background-color: #fff;
+    flex-grow: 1;
+
+
+}
+
+/* secondard  */
+.secondard {
+    width: 300px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.info-list {}
+
+.info-list .info-list-item {
+    display: flex;
+    margin: 7px 0;
+}
+
+.info-list .info-list-item::before {
+    content: "♥";
+
+    margin-right: 7px;
+}
+
+.user-list {
+    margin-top: 35px;
+}
+
+.user-list .user-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.user-list .user-item .user-photo {
+    background: url(https://ldb-phinf.pstatic.net/20220312_279/16470716815233fgIQ_PNG/%BC%AD%BF%EF%BA%EA%B7%E7%BE%EE%B8%AE%28seoulbrewery%29__Instagram_%BB%E7%C1%F8_%B9%D7_%B5%BF%BF%B5%BB%F3.png?type=w500_60_sharpen);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    border: 2px solid #333;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.user-list .user-item .user-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 7px;
+}
+
+
+.user-list .user-item .meaasge-content {
+    left: 10px;
+
+}
+
+/* 순서바꾸기 */
+.primary {
+    order: 2;
+    width: calc(100% - 600px);
+}
+
+/* -(부호)는 서로 띄우기 */
+.secondard1 {
+    order: 1;
+}
+
+.secondard2 {
+    order: 3;
+}
+
+
+/* footer */
+footer {
+    width: 100%;
+    order: 4;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 3;
+}
+
+/* 화면줄이기  */
+@media(max-width:1200px) {
+    .secondard {
+        width: 200px;
+    }
+
+    .primary {
+        width: 50%;
+        flex-grow: 1;
+    }
+}
+
+@media(max-width:1024px) {
+    .primary .card-list .card-item {
+        width: 50%;
+    }
+
+    .primary .card-list .card-item:last-child {
+        display: none;
+    }
+}
+
+@media(max-width:816px) {
+    .secondard {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:600px) {
+    .secondard1 {
+        order: 2
+    }
+
+    .primary .card-list .card-item {
+        width: 100%;
+    }
+
+}
